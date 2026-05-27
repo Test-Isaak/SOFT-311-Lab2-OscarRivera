@@ -8,7 +8,7 @@ from pages.products_page import ProductsPage
 import time
 
 
-def run():
+def test_view_mode():
 
     with sync_playwright() as playwright:
 
@@ -32,4 +32,4 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    test_view_mode()

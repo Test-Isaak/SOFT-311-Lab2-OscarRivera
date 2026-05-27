@@ -8,7 +8,7 @@ from pages.review_page import ReviewPage
 
 import time
 
-def run():
+def test_review():
 
     with sync_playwright() as playwright:
 
@@ -54,4 +54,4 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    test_review()

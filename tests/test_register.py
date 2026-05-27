@@ -8,7 +8,7 @@ from pages.register_page import RegisterPage
 import time
 
 
-def run():
+def test_register():
 
     with sync_playwright() as playwright:
 
@@ -24,7 +24,7 @@ def run():
 
         register.fill_lastname("python")
 
-        register.fill_email("test@python2.com")
+        register.fill_email("test@python3.com")
 
         register.fill_password("Qwerty123@")
         time.sleep(5)
@@ -40,4 +40,4 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    test_register()

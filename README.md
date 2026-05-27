@@ -16,6 +16,76 @@ https://storedemo.testdino.com/
 
 ---
 
+# Instalaciones Ambiente Virtual y Dependencias
+
+## Instalaccion En MAC
+
+
+- .venv/bin/activate
+- .venv/bin/python -m pip install --upgrade pip
+- .venv/bin/pip install -e .
+- .venv/bin/python -m playwright install chromium
+- .venv/bin/python -m pip install pytest-html
+
+
+## Instalacion en Windows
+
+- .venv\Scripts\activate.bat
+- .venv\Scripts\python -m pip install --upgrade pip
+- .venv\Scripts\pip install -e .
+- .venv\Scripts\python -m playwright install chromium
+- .venv\Scripts\python -m pip install pytest-html
+
+
+---
+
+
+## Codigo para ejecutar 
+
+### Para Mac
+
+#### Todas las Pruebas
+
+```bash
+.venv/bin/python -m pytest
+```
+
+#### Prueba Especifica (Reemplazar el test.py por la prueba que desee)
+
+```bash
+.venv/bin/python tests/login_test.py
+```
+
+#### Pruebas y Reporte
+
+```bash
+.venv/bin/python -m pytest --html=report.html --self-contained-html
+```
+
+### Para Windows
+
+#### Todas las Pruebas
+
+```bash
+.venv\Scripts\python -m pytest
+```
+
+#### Prueba Especifica (Reemplazar el test.py por la prueba que desee)
+
+```bash
+.venv\Scripts\python tests\login_test.py
+```
+
+#### Pruebas y Reporte
+
+```bash
+.venv\Scripts\python -m pytest --html=report.html --self-contained-html
+```
+
+
+---
+
+
 ## Estructura del proyecto
 
 ```text
@@ -47,11 +117,15 @@ SOFT-311-Lab2-OscarRivera/
 └── pyproject.toml
 ```
 
+
 ---
+
 
 # Casos de Prueba Automatizados
 
+
 ---
+
 
 ## test_register - Validacion de Creacion de cuentas
 
@@ -70,7 +144,9 @@ El sistema debe mostrar el mensaje:
 Account created successfully! Please login to continue.
 ```
 
+
 ---
+
 
 ## test_login - Validación de inicio de sesión
 
@@ -89,7 +165,9 @@ El sistema debe mostrar el mensaje:
 Logged in successfully
 ```
 
+
 ---
+
 
 ## test_faq - Expansión de FAQ
 
@@ -104,7 +182,9 @@ Validar que las preguntas frecuentes se expandan al hacer clic.
 ### Resultado Esperado
 La pregunta frecuente debe expandirse y mostrar su contenido.
 
+
 ---
+
 
 ## test_view_mode - Validación de cambio de vista de productos
 
@@ -119,7 +199,9 @@ Validar que el listado de productos cambió de vista cuadriculada a vista lista.
 ### Resultado Esperado
 El sistema debe cambiar correctamente la vista
 
+
 ---
+
 
 ## test_review - Publicación de Review
 
@@ -141,10 +223,12 @@ La review debe mostrarse con el título:
 Titulo de Pruebas
 ```
 
+
 ---
 
 
 ## Assertions implementados
+
 
 ### Validacion de Creacion de cuentas: Verifica que el sistema muestre el mensaje correcto después de crear una cuenta. 
 ```python
@@ -171,23 +255,9 @@ assert "all-products-view-switcher-list" in page.content()
 assert page.locator("[data-testid='review-title']").text_content() == "Titulo de Pruebas"
 ```
 
----
-
-## Ejecutar pruebas (Modificar luego del slash por el test que desee ejecutar)
-
-### Para Mac
-
-```bash
-.venv/bin/python tests/login_test.py
-```
-
-### Para Windows
-
-```bash
-.venv\Scripts\python tests\login_test.py
-```
 
 ---
+
 
 ## Repositorio GitHub
 

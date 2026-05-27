@@ -8,7 +8,7 @@ from pages.login_page import LoginPage
 import time
 
 
-def run():
+def test_login():
 
     with sync_playwright() as playwright:
 
@@ -34,4 +34,4 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    test_login()

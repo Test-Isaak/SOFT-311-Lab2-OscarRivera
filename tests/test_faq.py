@@ -7,7 +7,7 @@ from playwright.sync_api import sync_playwright
 from pages.faq_page import FAQPage
 import time
 
-def run():
+def test_faq():
 
     with sync_playwright() as playwright:
 
@@ -33,4 +33,4 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    test_faq()
